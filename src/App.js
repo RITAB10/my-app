@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 
+let name ="Ritab";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React With RITAB
-        </a>
-      </header>
+    <>
+    <nav>
+      <ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Services</li>
+      </ul>
+    </nav>
+    <img src="" alt="" />
+    <div className="container">
+      <h1>hello {name}</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi tenetur rem omnis impedit mollitia, voluptatem provident aliquid ducimus dolorem neque eaque ad non voluptate obcaecati totam voluptas nesciunt tempora at quaerat similique aliquam facere?</p>
     </div>
+    </>
   );
 }
 
