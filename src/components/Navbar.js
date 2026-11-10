@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function Navbar(props) {
   return (
-    <nav className="navbar md:navbar-expand bg-1">
+    <nav className="navbar md:navbar-expand bg-dark bg-gradient">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           {props.title}
@@ -57,7 +57,7 @@ export default function Navbar(props) {
                 aria-label="Search"
               />
               <button
-                className="btn-solid btn-icon theme-secondary"
+                className="btn-outline btn-icon theme-primary"
                 type="submit"
               >
                 <svg className="bi" width="16" height="16">
