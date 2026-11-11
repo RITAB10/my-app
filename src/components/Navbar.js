@@ -59,7 +59,8 @@ export default function Navbar(props) {
               <button
                 className="btn-outline btn-icon theme-primary"
                 type="submit"
-              >
+                style={{width:80,padding:13,height:30}}
+              >Search
                 <svg className="bi" width="16" height="16">
                   <use href="#search" />
                 </svg>
