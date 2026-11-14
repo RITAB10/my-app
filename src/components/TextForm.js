@@ -45,7 +45,7 @@ export default function TextForm(props) {
 
   return (
     <>
-      <div className="container bg-dark bg-gradient">
+      <div className="container bg-gradient">
         <h1 className="bg-dark container">{props.heading}</h1>
         <div className="form-field">
           <textarea
@@ -74,7 +74,7 @@ export default function TextForm(props) {
         <button className="btn-solid theme-info my-5 mx-5" onClick={reverse}>
           Reverse the Text
         </button>
-        <button className="btn-solid theme-danger text-white my-5 mx-5" style={{color: "var(--bs-theme-focus-ring)"}} onClick={capitalize}>
+        <button className="btn-solid theme-danger my-5 mx-5" onClick={capitalize}>
           Capitalize
         </button>
       </div>
