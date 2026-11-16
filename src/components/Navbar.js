@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 
 export default function Navbar(props) {
   return (
-    <nav className="navbar md:navbar-expand bg-gradient" data-bs-theme="dark">
+    <nav
+      className="navbar md:navbar-expand bg-gradient"
+      data-bs-theme={props.mode}
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           {props.title}
@@ -59,12 +62,24 @@ export default function Navbar(props) {
               <button
                 className="btn-outline btn-icon theme-primary"
                 type="submit"
-                style={{width:80,padding:13,height:30}}
-              >Search
+                style={{ width: 80, padding: 13, height: 30 }}
+              >
+                Search
                 <svg className="bi" width="16" height="16">
                   <use href="#search" />
                 </svg>
               </button>
+              <div className="form-field">
+                <div className="switch theme-primary">
+                  <input
+                    type="checkbox"
+                    onClick={props.toggleMode}
+                    id="switchprimary"
+                    role="switch"
+                  />
+                </div>
+                <label htmlFor="switchprimary">Enable Dark Mode</label>
+              </div>
             </form>
           </div>
         </dialog>
@@ -73,7 +88,8 @@ export default function Navbar(props) {
   );
 }
 
-Navbar.propTypes = { title: PropTypes.string.isRequired,
-                     about: PropTypes.string};
-Navbar.defaultProps={title:'set title here',
-                    about:'set about here'};
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  about: PropTypes.string,
+};
+Navbar.defaultProps = { title: "set title here", about: "set about here" };

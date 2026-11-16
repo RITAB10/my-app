@@ -1,24 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function About() {
-    const [myStyle,setmyStyle]=useState("light");
-    const [text,setText]=useState("Dark");
-    const changeMode=()=>{
-        if(myStyle==="light")
-        {
-            setmyStyle("dark");
-            setText("Light");
-        }
-        else
-        {
-            setmyStyle("light");
-            setText("Dark");
-        }
-    }
+export default function About(props) {
   return (
-    <div className="container" data-bs-theme={myStyle}>
+    <div className="container" data-bs-theme={props.myStyle}>
       <div className="accordion" >
-        <h2 className="my-3">About Us</h2>
+        <h2 className="my-3" style={{color : props.color}}>About Us</h2>
         <details className="accordion-item" name="accordionExample" open>
           <summary className="accordion-header">
             Accordion Item #1
@@ -86,11 +72,6 @@ export default function About() {
             on your <code>&lt;details&gt;</code> elements.
           </div>
         </details>
-      </div>
-      <div className="container">
-        <button type="button" class="theme-primary btn-solid btn-styled my-5" onClick={changeMode}>
-          Enable {text} Mode
-        </button>
       </div>
     </div>
   );
