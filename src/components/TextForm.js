@@ -4,20 +4,24 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     let newText = text.toLocaleUpperCase();
     setText(newText);
+    props.showAlert("Converted to uppercase","success");
   };
 
   const handleLowClick = () => {
     let newText = text.toLocaleLowerCase();
     setText(newText);
+    props.showAlert("Converted to lowercase","success");
   };
 
   const removeSpaces = () => {
     let newText = text.replaceAll(" ", "");
     setText(newText);
+    props.showAlert("Removed spaces","success");
   };
 
   const clearText = () => {
     setText("");
+    props.showAlert("Cleared all texts","success");
   };
 
   const speak = () => {
@@ -28,21 +32,25 @@ export default function TextForm(props) {
   const reverse = () => {
     let reverseWord = text.split(" ").reverse().join(" ");
     setText(reverseWord);
+    props.showAlert("Reversed the text","success");
   };
 
   const capitalize = () => {
-    let newText = text.charAt(0).toUpperCase() + text.slice(1);
+    let newText = text.charAt(0).toUpperCase() + text.toLowerCase().slice(1);
     setText(newText);
+    props.showAlert("Capitalized the text","success");
   };
 
   const handleCopy = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Text copied","success");
   };
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Extra spaces removed","success");
   };
 
   const handleOnChange = (event) => {
