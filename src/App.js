@@ -25,11 +25,13 @@ function App() {
       setColor("white");
       document.body.style.backgroundColor="#541843";
       showAlert("Dark mode has been enabled","success");
+      document.title=`my-app - Dark Mode`;
     } else {
       setMode("light");
       setColor("black");
       document.body.style.backgroundColor="white";
       showAlert("Light mode has been enabled","danger");
+      document.title=`my-app - Light Mode`;
     }
   };
   return (
