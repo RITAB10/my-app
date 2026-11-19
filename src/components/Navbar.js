@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -8,9 +9,9 @@ export default function Navbar(props) {
       data-bs-theme={props.mode}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           {props.title}
-        </a>
+        </Link>
         <button
           className="btn-icon navbar-toggler"
           type="button"
@@ -42,14 +43,14 @@ export default function Navbar(props) {
           <div className="drawer-body mb-2 md:mb-0">
             <ul className="nav navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link className="nav-link" to="/about">
                   {props.about}
-                </a>
+                </Link>
               </li>
             </ul>
             <form className="hstack gap-2" role="search">
