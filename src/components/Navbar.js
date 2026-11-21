@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -9,9 +9,9 @@ export default function Navbar(props) {
       data-bs-theme={props.mode}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="/">
           {props.title}
-        </Link>
+        </a>
         <button
           className="btn-icon navbar-toggler"
           type="button"
@@ -43,34 +43,34 @@ export default function Navbar(props) {
           <div className="drawer-body mb-2 md:mb-0">
             <ul className="nav navbar-nav me-auto">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
-                </Link>
+                </a>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">
+              {/* <li className="nav-item">
+                <a className="nav-link" href="/about">
                   {props.about}
-                </Link>
-              </li>
+                </a>
+              </li> */}
             </ul>
             <form className="hstack gap-2" role="search">
-              <input
+              {/* <input
                 className="form-control"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-              />
-              <button
+              /> */}
+              {/* <button
                 className="btn-outline btn-icon theme-primary"
                 type="submit"
                 style={{ width: 80, padding: 13, height: 30 }}
               >
                 Search
                 <svg className="bi" width="16" height="16">
-                  <use href="#search" />
+                  <use href="#" />
                 </svg>
-              </button>
-              <div className="form-field">
+              </button> */}
+              <div className="form-field position-absolute end-0">
                 <div className="switch theme-primary">
                   <input
                     type="checkbox"

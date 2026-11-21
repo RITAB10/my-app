@@ -1,10 +1,10 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light");
   const [color, setColor] = useState("black");
@@ -37,7 +37,7 @@ function App() {
   };
   return (
     <>
-    <Router>
+      {/* <Router> */}
       <div className="bg-dark" data-bs-theme={mode}>
         <Navbar
           title="my-app"
@@ -48,7 +48,7 @@ function App() {
         <Alert alert={alert} />
 
         <div className="container my-5">
-          <Routes>
+          {/* <Routes>
             <Route exact path="/about" element={<About myStyle={mode} color={color} />} />
             <Route
               exact path="/"
@@ -61,10 +61,16 @@ function App() {
                 />
               }
             />
-          </Routes>
+          </Routes> */}
+          <TextForm
+            showAlert={showAlert}
+            heading="Enter the text to analyze below"
+            mode={mode}
+            color={color}
+          />
         </div>
       </div>
-    </Router>
+      {/* </Router> */}
     </>
   );
 }
