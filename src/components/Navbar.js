@@ -9,7 +9,7 @@ export default function Navbar(props) {
       data-bs-theme={props.mode}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="#">
           {props.title}
         </a>
         <button
@@ -43,7 +43,7 @@ export default function Navbar(props) {
           <div className="drawer-body mb-2 md:mb-0">
             <ul className="nav navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a className="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
               </li>
