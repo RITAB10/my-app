@@ -37,7 +37,7 @@ function App() {
   };
   return (
     <>
-      {/* <Router> */}
+      <Router>
       <div className="bg-dark" data-bs-theme={mode}>
         <Navbar
           title="my-app"
@@ -48,17 +48,17 @@ function App() {
         <Alert alert={alert} />
 
         <div className="container my-5">
-          <TextForm
+          {/* <TextForm
                   showAlert={showAlert}
                   heading=" Try my-app - Word Counter, Character Counter, Remove Extra Spaces"
                   mode={mode}
                   color={color}
                 />
-                <About myStyle={mode} color={color} />
-          {/* <Routes>
+                <About myStyle={mode} color={color} /> */}
+          <Routes>
             <Route exact path="/about" element={<About myStyle={mode} color={color} />} />
             <Route
-              exact path="/"
+              exact path="/my-app"
               element={
                 <TextForm
                   showAlert={showAlert}
@@ -68,7 +68,7 @@ function App() {
                 />
               }
             />
-          </Routes> */}
+          </Routes>
           {/* <TextForm
             showAlert={showAlert}
             heading="Enter the text to analyze below"
@@ -77,7 +77,7 @@ function App() {
           /> */}
         </div>
       </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
