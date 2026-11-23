@@ -48,9 +48,15 @@ function App() {
         <Alert alert={alert} />
 
         <div className="container my-5">
+          <TextForm
+                  showAlert={showAlert}
+                  heading=" Try my-app - Word Counter, Character Counter, Remove Extra Spaces"
+                  mode={mode}
+                  color={color}
+                />
           <Routes>
             <Route exact path="/about" element={<About myStyle={mode} color={color} />} />
-            <Route
+            {/* <Route
               exact path="/"
               element={
                 <TextForm
@@ -60,7 +66,7 @@ function App() {
                   color={color}
                 />
               }
-            />
+            /> */}
           </Routes>
           {/* <TextForm
             showAlert={showAlert}
