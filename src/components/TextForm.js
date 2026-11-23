@@ -65,7 +65,7 @@ export default function TextForm(props) {
   return (
     <>
       <div data-bs-theme={props.mode}>
-        <h1 className="bg-dark container" style={{ color: props.color }}>
+        <h1 className="bg-dark container mb-10" style={{ color: props.color }}>
           {props.heading}
         </h1>
         <div className="form-field">
@@ -80,48 +80,55 @@ export default function TextForm(props) {
         <button
           className="btn-solid theme-warning my-5 mx-5"
           onClick={handleUpClick}
+          disabled={text.length===0}
         >
           Convert to Uppercase
         </button>
         <button
           className="btn-solid theme-primary my-5 mx-5"
           onClick={handleLowClick}
+          disabled={text.length===0}
         >
           Convert to Lowercase
         </button>
         <button
           className="btn-solid theme-danger my-5 mx-5"
           onClick={removeSpaces}
+          disabled={text.length===0}
         >
           Remove all spcaes
         </button>
         <button
           className="btn-solid theme-success my-5 mx-5"
           onClick={clearText}
+          disabled={text.length===0}
         >
           Clear All
         </button>
-        <button className="btn-solid theme-accent my-5 mx-5" onClick={speak}>
+        <button className="btn-solid theme-accent my-5 mx-5" onClick={speak} disabled={text.length===0}>
           Speak
         </button>
-        <button className="btn-solid theme-info my-5 mx-5" onClick={reverse}>
+        <button className="btn-solid theme-info my-5 mx-5" onClick={reverse} disabled={text.length===0}>
           Reverse the Text
         </button>
         <button
           className="btn-solid theme-danger my-5 mx-5"
           onClick={capitalize}
+          disabled={text.length===0}
         >
           Capitalize
         </button>
         <button
           className="btn-solid theme-warning my-5 mx-5"
           onClick={handleCopy}
+          disabled={text.length===0}
         >
           Copy Text
         </button>
         <button
           className="btn-solid theme-accent my-5 mx-5"
           onClick={handleExtraSpaces}
+          disabled={text.length===0}
         >
           Remove Extra Spaces
         </button>
@@ -140,7 +147,7 @@ export default function TextForm(props) {
           {countWords(text) * 0.008 * 60} seconds to read
         </p>
         <h3 style={{ color: props.color }}>Preview</h3>
-        <p style={{ color: props.color }}>{text}</p>
+        <p style={{ color: props.color }}>{text.length>0?text:'Nothing to preview!!'}</p>
       </div>
     </>
   );

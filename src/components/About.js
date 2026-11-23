@@ -3,11 +3,13 @@ import React from "react";
 export default function About(props) {
   return (
     <div className="container" data-bs-theme={props.myStyle}>
-      <div className="accordion" >
-        <h2 className="my-3" style={{color : props.color}}>About Us</h2>
+      <div className="accordion">
+        <h2 className="my-3" style={{ color: props.color }}>
+          About Us
+        </h2>
         <details className="accordion-item" name="accordionExample" open>
           <summary className="accordion-header">
-            Accordion Item #1
+            <strong>Analyze your text</strong>
             <svg
               className="accordion-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -21,16 +23,13 @@ export default function About(props) {
             </svg>
           </summary>
           <div className="accordion-body">
-            <strong>This is the first item’s accordion body.</strong> It is
-            shown by default because the <code>open</code> attribute is present.
-            The native <code>&lt;details&gt;</code> element handles all the
-            show/hide logic without any JavaScript. You can put any HTML content
-            within the <code>.accordion-body</code>.
+            my-app gives you a way to analyze your text quickly and efficiently.
+            Be it word count, character count or
           </div>
         </details>
         <details className="accordion-item" name="accordionExample">
           <summary className="accordion-header">
-            Accordion Item #2
+            <strong>Free to use</strong>
             <svg
               className="accordion-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -44,15 +43,15 @@ export default function About(props) {
             </svg>
           </summary>
           <div className="accordion-body">
-            <strong>This is the second item’s accordion body.</strong> The{" "}
-            <code>name</code> attribute groups this with other accordion items.
-            When you open this item, any other open item in the same group will
-            close automatically.
+            my-app is a free character counter tool that provides instatnt
+            character count & word count statistics for a given text. my-app
+            reports the number of words and characters. Thus it's suitable for
+            writing text with word/ character limit.
           </div>
         </details>
         <details className="accordion-item" name="accordionExample">
           <summary className="accordion-header">
-            Accordion Item #3
+            <strong>Browser Compatible</strong>
             <svg
               className="accordion-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -66,10 +65,10 @@ export default function About(props) {
             </svg>
           </summary>
           <div className="accordion-body">
-            <strong>This is the third item’s accordion body.</strong> This
-            exclusive accordion behavior is built into the browser—no Bootstrap
-            JavaScript required. Just use matching <code>name</code> attributes
-            on your <code>&lt;details&gt;</code> elements.
+            This word counter software works in any web browser such as Chrome,
+            Firefox, Internet Explorer, Safari, Opera. It suits to count
+            character in facebook, blog, excel document, pdf document, essays,
+            etc.
           </div>
         </details>
       </div>
