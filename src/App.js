@@ -37,7 +37,7 @@ function App() {
   };
   return (
     <>
-      <Router>
+      {/* <Router> */}
       <div className="bg-dark" data-bs-theme={mode}>
         <Navbar
           title="my-app"
@@ -54,9 +54,10 @@ function App() {
                   mode={mode}
                   color={color}
                 />
-          <Routes>
+                <About myStyle={mode} color={color} />
+          {/* <Routes>
             <Route exact path="/about" element={<About myStyle={mode} color={color} />} />
-            {/* <Route
+            <Route
               exact path="/"
               element={
                 <TextForm
@@ -66,8 +67,8 @@ function App() {
                   color={color}
                 />
               }
-            /> */}
-          </Routes>
+            />
+          </Routes> */}
           {/* <TextForm
             showAlert={showAlert}
             heading="Enter the text to analyze below"
@@ -76,7 +77,7 @@ function App() {
           /> */}
         </div>
       </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
