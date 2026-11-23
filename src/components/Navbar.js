@@ -9,9 +9,9 @@ export default function Navbar(props) {
       data-bs-theme={props.mode}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="#">
           {props.title}
-        </Link>
+        </a>
         <button
           className="btn-icon navbar-toggler"
           type="button"
@@ -43,14 +43,14 @@ export default function Navbar(props) {
           <div className="drawer-body mb-2 md:mb-0">
             <ul className="nav navbar-nav me-auto">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <a className="nav-link active" aria-current="page" href="#">
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <a className="nav-link" href="#">
                   {props.about}
-                </Link>
+                </a>
               </li>
             </ul>
             <form className="hstack gap-2" role="search">
