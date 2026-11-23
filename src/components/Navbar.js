@@ -62,7 +62,7 @@ export default function Navbar(props) {
               />
               <button
                 className="btn-outline btn-icon theme-primary"
-                type="submit"
+                type="button"
                 style={{ width: 80, padding: 13, height: 30 }}
               >
                 Search
