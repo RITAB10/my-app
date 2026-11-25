@@ -42,11 +42,11 @@ export default function TextForm(props) {
   };
 
   const handleCopy = () => {
-    let text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
-    props.showAlert("Text copied","success");
+    // let text = document.getElementById("myBox");
+    // text.select();
+    navigator.clipboard.writeText(text);
+    // document.getSelection().removeAllRanges();
+    props.showAlert("Text copied to Clipboard","success");
   };
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
@@ -59,7 +59,7 @@ export default function TextForm(props) {
   };
 
   const countWords = (text) =>
-    text.trim() ? text.trim().split(" ").length : 0;
+    text.trim() ? text.trim().split(/\s+/).length : 0;
 
   const [text, setText] = useState("Enter Text Here");
 

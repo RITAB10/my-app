@@ -43,7 +43,11 @@ export default function Navbar(props) {
           <div className="drawer-body mb-2 md:mb-0">
             <ul className="nav navbar-nav me-auto">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/my-app">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/my-app"
+                >
                   Home
                 </Link>
               </li>
@@ -53,8 +57,8 @@ export default function Navbar(props) {
                 </Link>
               </li>
             </ul>
-            <form className="hstack gap-2" role="search">
-              <input
+            {/* <form className="hstack gap-2" role="search"> */}
+            {/* <input
                 className="form-control"
                 type="search"
                 placeholder="Search"
@@ -69,9 +73,27 @@ export default function Navbar(props) {
                 <svg className="bi" width="16" height="16">
                   <use href="#" />
                 </svg>
-              </button>
-              <div className="form-field">
-                <div className="switch theme-primary">
+              </button> */}
+            <div className="d-flex gap-3">
+                <div className="d-flex">
+                  <div
+                    className="bg-primary rounded mx-2"
+                    style={{ height: "30px", width: "30px",cursor:'pointer' }}
+                  ></div>
+                  <div
+                    className="bg-danger rounded mx-2"
+                    style={{ height: "30px", width: "30px",cursor:'pointer' }}
+                  ></div>
+                  <div
+                    className="bg-success rounded mx-2"
+                    style={{ height: "30px", width: "30px",cursor:'pointer' }}
+                  ></div>
+                  <div
+                    className="bg-warning rounded mx-2"
+                    style={{ height: "30px", width: "30px",cursor:'pointer' }}
+                  ></div>
+                </div>
+                <div className="switch theme-primary mt-1">
                   <input
                     type="checkbox"
                     onClick={props.toggleMode}
@@ -80,8 +102,9 @@ export default function Navbar(props) {
                   />
                 </div>
                 <label htmlFor="switchprimary">Enable Dark Mode</label>
-              </div>
-            </form>
+              
+            </div>
+            {/* </form> */}
           </div>
         </dialog>
       </div>
